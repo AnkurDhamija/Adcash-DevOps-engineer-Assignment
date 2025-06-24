@@ -1,0 +1,5 @@
+# Inventory file specifying the target server for Prometheus installation
+
+[adcash-ansible]
+
+localhost ansible_connection=local

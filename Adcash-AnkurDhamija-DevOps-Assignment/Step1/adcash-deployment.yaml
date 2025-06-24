@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adcash-deployment
+  labels:
+    app: adcash
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adcash
+  template:
+    metadata:
+      labels:
+        app: adcash
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: "/metrics"
+        prometheus.io/port: "8080"
+    spec:
+      containers:
+        - name: adcash
+          image: 761018875260.dkr.ecr.ap-south-1.amazonaws.com/adcash:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 200m
+              memory: 256Mi
