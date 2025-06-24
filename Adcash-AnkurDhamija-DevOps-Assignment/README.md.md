@@ -40,14 +40,14 @@ docker run -d --name=adcash --restart=always -p 80:80 adcash-node-app:latest
 
 replicas: 1
 image: 761018875260.dkr.ecr.ap-south-1.amazonaws.com/adcash:latest
-containerPort: 8080
+containerPort: 80
 
 **Prometheus Annotations**
 
 
 prometheus.io/scrape: "true"
 prometheus.io/path: "/metrics"
-prometheus.io/port: "8080"
+prometheus.io/port: "80"
 
 
 **Apply Resources**
