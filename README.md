@@ -40,7 +40,7 @@ docker run -d --name=adcash --restart=always -p 80:80 adcash-node-app:latest
 
 
 replicas: 1
-image: 761018875260.dkr.ecr.ap-south-1.amazonaws.com/adcash:latest
+image: 7***************.dkr.ecr.ap-south-1.amazonaws.com/adcash:latest
 containerPort: 80
 
 **Prometheus Annotations**
