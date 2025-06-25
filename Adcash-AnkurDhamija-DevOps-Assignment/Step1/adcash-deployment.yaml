@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: adcash
-          image: 761018875260.dkr.ecr.ap-south-1.amazonaws.com/adcash:latest
+          image: 7**********.dkr.ecr.ap-south-1.amazonaws.com/adcash:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
