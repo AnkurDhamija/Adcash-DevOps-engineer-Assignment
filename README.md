@@ -167,6 +167,6 @@ Command 2: kubectl get all
 # Process to Access Prometheus
 
 
-http://<loadbalancer-dns>/
+http://endpoint of our loadbalancer/
 
 -----------------------
